@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">conservative-investor-s-assistant</string>
+
+    <!-- settingsLayout -->
+    <string name="calc_tax">Учитывать налоги</string>
+    <string name="amount">13%</string>
+    <string name="hide_cent">Скрыть копейки</string>
+
+
+</resources>
