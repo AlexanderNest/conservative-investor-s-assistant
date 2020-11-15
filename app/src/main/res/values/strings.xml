@@ -7,4 +7,15 @@
     <string name="hide_cent">Скрыть копейки</string>
 
 
+
+    <!-- MainLayout -->
+
+    <string name="full_cost">Итого: </string>
+    <string name="rub">RUB</string>
+    <string name="usd">USD</string>
+    <string name="start_amount">0</string>
+    <string name="currency">P</string>
+
+
+
 </resources>

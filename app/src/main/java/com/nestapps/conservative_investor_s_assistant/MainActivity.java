@@ -35,4 +35,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
         startActivity(intent);
     }
+
+    public void onRubleLayoutClicked(View view){
+        View dollar_layout = findViewById(R.id.dollar_layout);
+        dollar_layout.setBackground(null);
+        view.setBackground(getDrawable(R.drawable.checked_border));
+    }
+
+    public void onDollarLayoutClicked(View view){
+        View ruble_layout = findViewById(R.id.ruble_layout);
+        ruble_layout.setBackground(null);
+        view.setBackground(getDrawable(R.drawable.checked_border));
+    }
 }
