@@ -16,6 +16,10 @@
     <string name="start_amount">0</string>
     <string name="currency">P</string>
 
+    <!-- SettingButton -->
+    <string name="open_settings">Настройки</string>
+
+
 
 
 </resources>
