@@ -21,15 +21,23 @@ public class Bonds extends AsyncTask<String, Void, String> {
         String isin = strings[0];
         URL += isin; // готовый адрес облигации
 
-        Map<String, String> info = getMainInfo();
+        Map<String, String> info = null;
+        ArrayList <String[]> payments = null;
+
+        try {
+            info = getMainInfo();
+            payments = getPaymentsInfo();
+        } catch (Exception e) {
+            return null;
+        }
 
         //ArrayList <String[]> payments = getPaymentsInfo(); //тут платежи купонов
 
-        //System.out.println(info.toString());
-        for (var i : payments){
+        String date = info.get("Дата размещения");
+        /*for (var i : payments){
             System.out.println(Arrays.toString(i));
-        }
-        return null;
+        }*/
+        return date;
     }
 
 
@@ -50,7 +58,7 @@ public class Bonds extends AsyncTask<String, Void, String> {
     }
 
 
-    public Map<String, String> getMainInfo(){
+    private Map<String, String> getMainInfo(){
         Elements tables = getPureTables();
         String g = tables.get(0).toString();
 
@@ -77,7 +85,7 @@ public class Bonds extends AsyncTask<String, Void, String> {
         return pairs;
     }
 
-    public ArrayList<String[]> getPaymentsInfo(){
+    private ArrayList<String[]> getPaymentsInfo(){
         Elements tables = getPureTables();
         String g = tables.get(1).toString();
 

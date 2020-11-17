@@ -27,9 +27,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/obligation_layout"
@@ -38,23 +38,29 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/checked_border"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/obligation"
                 android:clickable="true"
-                android:onClick="onObligationLayoutClicked"/>
+                android:gravity="center"
+                android:onClick="onObligationLayoutClicked"
+                android:padding="5dp"
+                android:text="@string/obligation" />
 
             <TextView
                 android:id="@+id/stock_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/stock"
                 android:clickable="true"
-                android:onClick="onStockLayoutClicked"/>
+                android:gravity="center"
+                android:onClick="onStockLayoutClicked"
+                android:padding="5dp"
+                android:text="@string/stock" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/nameoblig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
     </LinearLayout>
 

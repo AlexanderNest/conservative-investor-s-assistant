@@ -6,10 +6,17 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.nestapps.conservative_investor_s_assistant.utils.Bonds;
+
+import org.w3c.dom.Text;
+
+import java.util.concurrent.ExecutionException;
 
 public class AddAssetActivity extends AppCompatActivity {
 
@@ -53,7 +60,14 @@ public class AddAssetActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                getName();
+                TextView et = findViewById(R.id.nameoblig);
+                String text = getName();
+                if (text != null){
+                    et.setText(text);
+                }else {
+                    et.setText("Не найдено");
+                }
+
             }
         });
     }
@@ -81,6 +95,18 @@ public class AddAssetActivity extends AppCompatActivity {
     }
 
     private String getName(){
-        return null;
+        //рабочая облигация "RU000A101HU5"
+        Bonds bondTask = new Bonds();
+        EditText et = findViewById(R.id.searching_textbox);
+        bondTask.execute(et.getText().toString());
+        String result = "";
+        try {
+           result = bondTask.get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }
