@@ -34,15 +34,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void on_add_asset_button_clicked(View view){
-        /*Intent intent = new Intent(MainActivity.this, AddAssetActivity.class);
-        startActivity(intent);*/
+        Intent intent = new Intent(MainActivity.this, AddAssetActivity.class);
+        startActivity(intent);
 
         //снизу создание layout инстумента
-        LayoutInflater ltInflater = getLayoutInflater();
+        /*LayoutInflater ltInflater = getLayoutInflater();
         RelativeLayout assetlayout = (RelativeLayout)
                 ltInflater.inflate(R.layout.asset_layout, null, false);
         LinearLayout assets = findViewById(R.id.assetslayout);
-        assets.addView(assetlayout);
+        assets.addView(assetlayout);*/
     }
 
     public boolean on_settings_button_clicked(MenuItem item) {

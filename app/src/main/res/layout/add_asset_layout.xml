@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
    >
 
     <LinearLayout
@@ -15,39 +16,44 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:onClick="onReturnButtonClicked" />
-
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/searching_textbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:hint="@string/searching_hint"
+                android:inputType="textPersonName" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/obligation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/checked_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/obligation"
+                android:clickable="true"
+                android:onClick="onObligationLayoutClicked"/>
+
+            <TextView
+                android:id="@+id/stock_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Облигации" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Button" />
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/stock"
+                android:clickable="true"
+                android:onClick="onStockLayoutClicked"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">conservative-investor-s-assistant</string>
+    <string name="app_name">Помощник инвестора</string>
 
     <!-- settingsLayout -->
     <string name="calc_tax">Учитывать налоги</string>
@@ -9,15 +9,21 @@
 
 
     <!-- MainLayout -->
-
     <string name="full_cost">Итого: </string>
     <string name="rub">RUB</string>
     <string name="usd">USD</string>
     <string name="start_amount">0</string>
     <string name="currency">P</string>
 
-    <!-- SettingButton -->
+    <!-- SettingButton in MainLayout -->
     <string name="open_settings">Настройки</string>
+
+
+
+    <!-- add_asset_layout -->
+    <string name="obligation">Облигации</string>
+    <string name="stock">Акции</string>
+    <string name="searching_hint">Введите название</string>
 
 
 
